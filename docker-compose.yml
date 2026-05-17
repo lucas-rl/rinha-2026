@@ -14,8 +14,6 @@ services:
 
   api2:
     image: lucasrl55/api-rinha-2026:v1.0
-    build:
-      context: ./api
     container_name: api2
     environment:
       PORT: 8082
