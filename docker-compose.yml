@@ -1,8 +1,7 @@
 services:
 
   api1:
-    build:
-      context: ./api
+    image: lucasrl55/api-rinha-2026:v1.0
     container_name: api1
     environment:
       PORT: 8081
@@ -14,6 +13,7 @@ services:
       - ./centroids.bin:/app/dataset.bin:ro
 
   api2:
+    image: lucasrl55/api-rinha-2026:v1.0
     build:
       context: ./api
     container_name: api2
@@ -27,8 +27,7 @@ services:
       - ./centroids.bin:/app/dataset.bin:ro
 
   loadbalancer:
-    build:
-      context: ./loadbalancer
+    image: lucasrl55/lb-rinha-2026:v1.0
     container_name: loadbalancer
     ports:
       - "9999:9999"
