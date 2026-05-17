@@ -1,0 +1,139 @@
+[
+  {
+    "expected": "legit",
+    "payload": {
+      "id":"tx-1",
+      "transaction":{"amount":52.4,"installments":2,"requested_at":"2026-03-10T19:12:00Z"},
+      "customer":{"avg_amount":120.0,"tx_count_24h":3,"known_merchants":["MERC-001","MERC-002"]},
+      "merchant":{"id":"MERC-001","mcc":"5411","avg_amount":88.0},
+      "terminal":{"is_online":false,"card_present":true,"km_from_home":22.0},
+      "last_transaction":null
+    }
+  },
+
+  {
+    "expected":"fraud",
+    "payload":{
+      "id":"tx-2",
+      "transaction":{"amount":9200.0,"installments":11,"requested_at":"2026-03-14T03:11:00Z"},
+      "customer":{"avg_amount":95.0,"tx_count_24h":20,"known_merchants":["MERC-004"]},
+      "merchant":{"id":"MERC-999","mcc":"7995","avg_amount":65.0},
+      "terminal":{"is_online":false,"card_present":true,"km_from_home":940.0},
+      "last_transaction":null
+    }
+  },
+
+  {
+    "expected":"legit",
+    "payload":{
+      "id":"tx-3",
+      "transaction":{"amount":180.0,"installments":3,"requested_at":"2026-03-11T18:00:00Z"},
+      "customer":{"avg_amount":500.0,"tx_count_24h":5,"known_merchants":["MERC-010"]},
+      "merchant":{"id":"MERC-010","mcc":"5311","avg_amount":230.0},
+      "terminal":{"is_online":true,"card_present":false,"km_from_home":40.0},
+      "last_transaction":{
+        "timestamp":"2026-03-11T17:20:00Z",
+        "km_from_current":8.0
+      }
+    }
+  },
+
+  {
+    "expected":"fraud",
+    "payload":{
+      "id":"tx-4",
+      "transaction":{"amount":7700.0,"installments":9,"requested_at":"2026-03-13T02:40:00Z"},
+      "customer":{"avg_amount":120.0,"tx_count_24h":18,"known_merchants":["MERC-021"]},
+      "merchant":{"id":"MERC-777","mcc":"7801","avg_amount":44.0},
+      "terminal":{"is_online":true,"card_present":false,"km_from_home":810.0},
+      "last_transaction":{
+        "timestamp":"2026-03-13T02:32:00Z",
+        "km_from_current":430.0
+      }
+    }
+  },
+
+  {
+    "expected":"legit",
+    "payload":{
+      "id":"tx-5",
+      "transaction":{"amount":90.0,"installments":1,"requested_at":"2026-03-12T13:11:00Z"},
+      "customer":{"avg_amount":140.0,"tx_count_24h":2,"known_merchants":["MERC-030"]},
+      "merchant":{"id":"MERC-030","mcc":"5812","avg_amount":75.0},
+      "terminal":{"is_online":false,"card_present":true,"km_from_home":11.0},
+      "last_transaction":null
+    }
+  },
+
+  {
+    "expected":"fraud",
+    "payload":{
+      "id":"tx-6",
+      "transaction":{"amount":6500.0,"installments":10,"requested_at":"2026-03-15T01:00:00Z"},
+      "customer":{"avg_amount":80.0,"tx_count_24h":19,"known_merchants":["MERC-011","MERC-012"]},
+      "merchant":{"id":"MERC-888","mcc":"7802","avg_amount":50.0},
+      "terminal":{"is_online":true,"card_present":false,"km_from_home":760.0},
+      "last_transaction":{
+        "timestamp":"2026-03-15T00:54:00Z",
+        "km_from_current":390.0
+      }
+    }
+  },
+
+  {
+    "expected":"legit",
+    "payload":{
+      "id":"tx-7",
+      "transaction":{"amount":140.0,"installments":2,"requested_at":"2026-03-11T21:20:00Z"},
+      "customer":{"avg_amount":300.0,"tx_count_24h":4,"known_merchants":["MERC-045"]},
+      "merchant":{"id":"MERC-045","mcc":"5944","avg_amount":200.0},
+      "terminal":{"is_online":true,"card_present":false,"km_from_home":25.0},
+      "last_transaction":{
+        "timestamp":"2026-03-11T20:40:00Z",
+        "km_from_current":6.0
+      }
+    }
+  },
+
+  {
+    "expected":"fraud",
+    "payload":{
+      "id":"tx-8",
+      "transaction":{"amount":8400.0,"installments":12,"requested_at":"2026-03-14T04:20:00Z"},
+      "customer":{"avg_amount":100.0,"tx_count_24h":20,"known_merchants":["MERC-001"]},
+      "merchant":{"id":"MERC-666","mcc":"7995","avg_amount":35.0},
+      "terminal":{"is_online":false,"card_present":true,"km_from_home":980.0},
+      "last_transaction":null
+    }
+  },
+
+  {
+    "expected":"legit",
+    "payload":{
+      "id":"tx-9",
+      "transaction":{"amount":70.0,"installments":2,"requested_at":"2026-03-10T16:00:00Z"},
+      "customer":{"avg_amount":200.0,"tx_count_24h":3,"known_merchants":["MERC-080","MERC-081"]},
+      "merchant":{"id":"MERC-080","mcc":"5411","avg_amount":120.0},
+      "terminal":{"is_online":false,"card_present":true,"km_from_home":18.0},
+      "last_transaction":{
+        "timestamp":"2026-03-10T15:20:00Z",
+        "km_from_current":4.0
+      }
+    }
+  },
+
+  {
+    "expected":"fraud",
+    "payload":{
+      "id":"tx-10",
+      "transaction":{"amount":7200.0,"installments":8,"requested_at":"2026-03-13T05:10:00Z"},
+      "customer":{"avg_amount":90.0,"tx_count_24h":17,"known_merchants":["MERC-009"]},
+      "merchant":{"id":"MERC-999","mcc":"7801","avg_amount":42.0},
+      "terminal":{"is_online":true,"card_present":false,"km_from_home":880.0},
+      "last_transaction":{
+        "timestamp":"2026-03-13T05:03:00Z",
+        "km_from_current":410.0
+      }
+    }
+  }
+]
