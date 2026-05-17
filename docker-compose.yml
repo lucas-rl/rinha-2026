@@ -1,0 +1,39 @@
+services:
+
+  api1:
+    build:
+      context: ./api
+    container_name: api1
+    environment:
+      PORT: 8081
+    mem_limit: 140m
+    cpus: 0.45
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./centroids.bin:/app/dataset.bin:ro
+
+  api2:
+    build:
+      context: ./api
+    container_name: api2
+    environment:
+      PORT: 8082
+    mem_limit: 140m
+    cpus: 0.45
+    ports:
+      - "8082:8082"
+    volumes:
+      - ./centroids.bin:/app/dataset.bin:ro
+
+  loadbalancer:
+    build:
+      context: ./loadbalancer
+    container_name: loadbalancer
+    ports:
+      - "9999:9999"
+    mem_limit: 70m
+    cpus: 0.1
+    depends_on:
+      - api1
+      - api2
